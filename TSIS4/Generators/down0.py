@@ -3,5 +3,5 @@ def downcount(n):
         yield n
         n -= 1
 n = int(input())
-for num in downcount(n):
-    print(num)
+num = downcount(n)
+print(*num, sep=", ")
