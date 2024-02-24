@@ -10,7 +10,7 @@ print("-" * 80)
 
 for interface in interfaces:
     dn = interface['l1PhysIf']['attributes']['dn']
-    descr = interface['l1PhysIf']['attributes'].get('descr', '')
-    speed = interface['l1PhysIf']['attributes'].get('speed', 'inherit')
-    mtu = interface['l1PhysIf']['attributes'].get('mtu', '')
+    descr = interface['l1PhysIf']['attributes']['descr']
+    speed = interface['l1PhysIf']['attributes']['speed']
+    mtu = interface['l1PhysIf']['attributes']['mtu']
     print("{:<40} {:<20} {:<10} {:<6}".format(dn, descr, speed, mtu))
